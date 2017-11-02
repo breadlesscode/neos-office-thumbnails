@@ -1,0 +1,23 @@
+{
+    "type": "neos-plugin",
+    "name": "breadlesscode/neos-office-thumbnails",
+    "authors": [
+        {
+            "name": "Marvin Kuhn",
+            "email": "git@kuhnweblab.com",
+            "homepage": "https://kuhnweblab.com/",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Breadlesscode\\": "Classes"
+        }
+    },
+    "require": {
+        "php": "^7.0",
+        "neos/flow": "*",
+        "neos/media": "*",
+        "breadlesscode/office-converter": "dev-master"
+    }
+}

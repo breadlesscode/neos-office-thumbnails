@@ -1,4 +1,6 @@
 # NEOS office thumbnails generator
+![Downloads](https://img.shields.io/packagist/dt/doctrine/orm.svg)
+
 This NEOS CMS Plugin is for generating thumbnails of office documents. 
 
 ## Installation

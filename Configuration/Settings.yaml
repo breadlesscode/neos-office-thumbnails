@@ -2,6 +2,5 @@ Neos:
   Media:
     thumbnailGenerators:
       Breadlesscode\Domain\Model\ThumbnailGenerator\OfficeThumbnailGenerator:
-        priority: 120
         timeout: 120
         binPath: 'libreoffice'

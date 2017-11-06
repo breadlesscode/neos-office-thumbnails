@@ -17,7 +17,7 @@ class OfficeThumbnailGenerator extends AbstractThumbnailGenerator
      * @var integer
      * @api
      */
-    protected static $priority = 200;
+    protected static $priority = 10;
     /**
      * @var ImageService
      * @Flow\Inject

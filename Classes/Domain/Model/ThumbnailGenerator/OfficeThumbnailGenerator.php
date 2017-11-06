@@ -53,7 +53,7 @@ class OfficeThumbnailGenerator extends AbstractThumbnailGenerator
                 $converter->content('png'),
                 $filenameWithoutExtension . '.png'
             );
-            $processedImageInfo = $this->adjustImage($thumbnail, $resource);
+            $processedImageInfo = $this->resizeThumbnail($thumbnail, $resource);
 
             $thumbnail->setResource($processedImageInfo['resource']);
             $thumbnail->setWidth($processedImageInfo['width']);
@@ -71,7 +71,7 @@ class OfficeThumbnailGenerator extends AbstractThumbnailGenerator
      * @param  PersistentResource $resource
      * @return array               processed image info
      */
-    protected function adjustImage(Thumbnail $thumbnail, PersistentResource $resource)
+    protected function resizeThumbnail(Thumbnail $thumbnail, PersistentResource $resource)
     {
         $adjustments = [
             new ResizeImageAdjustment([

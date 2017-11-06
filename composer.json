@@ -18,6 +18,6 @@
         "php": "^7.0",
         "neos/flow": "*",
         "neos/media": "*",
-        "breadlesscode/office-converter": "dev-master"
+        "breadlesscode/office-converter": "^0.1.0-beta1"
     }
 }

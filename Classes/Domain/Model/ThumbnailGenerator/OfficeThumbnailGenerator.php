@@ -3,14 +3,13 @@ namespace Breadlesscode\Domain\Model\ThumbnailGenerator;
 
 use Breadlesscode\Office\Converter;
 use Neos\Flow\Annotations as Flow;
+use Neos\Flow\ResourceManagement\PersistentResource;
 use Neos\Flow\ResourceManagement\ResourceManager;
+use Neos\Media\Domain\Model\Adjustment\ResizeImageAdjustment;
 use Neos\Media\Domain\Model\Thumbnail;
 use Neos\Media\Domain\Model\ThumbnailGenerator\AbstractThumbnailGenerator;
-use Neos\Media\Domain\Model\ThumbnailGenerator\Exception\NoThumbnailAvailableException;
-use Neos\Media\Exception;
-use Neos\Flow\ResourceManagement\PersistentResource;
 use Neos\Media\Domain\Service\ImageService;
-use Neos\Media\Domain\Model\Adjustment\ResizeImageAdjustment;
+use Neos\Media\Exception\NoThumbnailAvailableException;
 
 class OfficeThumbnailGenerator extends AbstractThumbnailGenerator
 {
@@ -46,9 +45,9 @@ class OfficeThumbnailGenerator extends AbstractThumbnailGenerator
             $temporaryLocalCopyFilename = $thumbnail->getOriginalAsset()->getResource()->createTemporaryLocalCopy();
             $fileType = $thumbnail->getOriginalAsset()->getResource()->getFileExtension();
 
-        	$converter = Converter::file($temporaryLocalCopyFilename, $fileType)
+            $converter = Converter::file($temporaryLocalCopyFilename, $fileType)
                 ->setLibreofficeBinaryPath($this->getOption('binPath'))
-        	    ->setTimeout($this->getOption('timeout'));
+                ->setTimeout($this->getOption('timeout'));
 
             $resource = $this->resourceManager->importResourceFromContent(
                 $converter->content('png'),

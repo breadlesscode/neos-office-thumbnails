@@ -13,8 +13,8 @@ composer require breadlesscode/neos-office-thumbnails
 ```
 
 ## Requirements
-This package needs [LibreOffice](https://libreoffice.org/) for the convertion.
-
+ - [LibreOffice](https://libreoffice.org/) for the convertion
+ - PHP >= 7.1
 
 ## Configuration
 
@@ -31,3 +31,7 @@ Neos:
 
 ## Screenshot
 ![Screenshot](./screenshot.gif)
+
+## License
+
+The MIT License (MIT). Please see [License File](LICENSE) for more information.
